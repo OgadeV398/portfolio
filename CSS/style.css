@@ -1,0 +1,922 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* stop the sticky nav bar from covering the top of a section */
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: black;
+    color: white;
+}
+/* ======================================================MAIN CONTAINER */
+
+.container {
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+/* ======================================================NAVIGATION AND LINKS */
+.nav-bar {
+    position: sticky; /* stays at the top while you scroll */
+    top: 0;
+    z-index: 100;
+    display: flex; 
+    background-color: black;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 2rem;
+}
+
+.nav-bar .name {
+    color: #00FF00;
+    font-size: 1.2rem;
+    margin-left: 0;
+}
+
+.links {
+    font-size: 0.85rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.links a {
+   display: inline-block;
+   text-decoration: none;
+   transition: transform 0.15s ease; 
+}
+
+.links a:link,
+.links a:visited {
+    color: aliceblue;
+    padding: 0.3dvw;
+}
+
+.links a:active {
+    transform: scale(0.95);
+}
+
+.links a {
+    position: relative;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -3px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #00FF00 ;
+
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+/* ======================================================HOME*/
+
+#home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+}
+
+/* ======================================================FULL-SCREEN SECTIONS */
+/* Each section fills the screen (minus the nav bar), with its content centred */
+#home,
+#about-me,
+#portfolio,
+#contact {
+    min-height: calc(100dvh - 70px);
+    padding: 4rem 0;
+}
+
+#about-me,
+#portfolio,
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ======================================================INTRO SECTION*/
+
+.intro-section {
+    height: auto;
+    width: 50%;
+}
+
+.intro-section p {
+    color: rgb(251, 252, 251);
+    margin-bottom: 1.5rem;
+    border: none;
+}
+
+.intro-section .greeting {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.intro-section .greeting span {
+    color: #00FF00;
+}
+
+.intro-section .job {
+    color: rgb(251, 252, 251);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.intro-section .text {
+    color: #A0A0A0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.intro-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-work,
+.btn-work:link,
+.btn-work:visited {
+    background-color: #00FF00;
+    color: #000;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.btn-touch,
+.btn-touch:link,
+.btn-touch:visited {
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid #FFF;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+/* ======================================================SELFIE. GEMINI GENERATED*/
+
+.selfie-container {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.selfie-container .green-background {
+    width: 280px;
+    height: 280px;
+    background-color: #00FF00;
+    border: none;
+    border-radius: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.selfie-container .green-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+}
+
+/* ======================================================ABOUT ME SECTION */
+
+#about-me {
+    width: 90%;
+    margin-left: 5%;
+}
+
+#about-me h1 {
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Green part of every section heading */
+#about-me h1 span,
+#portfolio h1 span,
+#contact h1 span {
+    color: #00FF00;
+}
+
+/* ======================================================GREEN GLOW */
+/* Soft neon glow on the green words in the headings */
+.intro-section .greeting span,
+#about-me h1 span,
+#portfolio h1 span,
+#contact h1 span {
+    text-shadow:
+        0 0 8px rgba(0, 255, 0, 0.6),
+        0 0 20px rgba(0, 255, 0, 0.35);
+}
+
+/* Glow around the green "Contact" box */
+.contact-badge span {
+    box-shadow:
+        0 0 12px rgba(0, 255, 0, 0.55),
+        0 0 28px rgba(0, 255, 0, 0.25);
+}
+
+/* Ensure the parent stretches both sides to equal height */
+.about-me-inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Allows top headers to line up naturally */
+    width: 100%;
+}
+
+/* ======================================================TEXT SECTION (LEFT) */
+
+.about-me-inner-container .text {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-inner-container .text h2 {
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-me-inner-container .text p {
+    color: #CCCCCC;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+}
+
+/* Stats Row Container */
+.about-me-inner-container .text .stats {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+}
+
+.about-me-inner-container .text .stats .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-me-inner-container .text .stats .stat-number {
+    color: #00FF00;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+    border: none;
+}
+
+.about-me-inner-container .text .stats .stat-label {
+    color: #888888;
+    font-size: 0.7rem;
+    font-weight: 500;
+    border: none;
+}
+
+.about-me-inner-container .text .cv-btn {
+    display: inline-block;
+    width: fit-content;
+    background-color: #00FF00;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+}
+
+/* ======================================================SKILLS SECTION (RIGHT) */
+
+.about-me-inner-container .skills {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-inner-container .skills h2 {
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-me-inner-container .skills .skill-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+}
+
+.about-me-inner-container .skills .skill-cards .column-1,
+.about-me-inner-container .skills .skill-cards .column-2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* Scaled Skill Cards matched to paragraph + stats height */
+.about-me-inner-container .skills .skill-cards .column-1 > div,
+.about-me-inner-container .skills .skill-cards .column-2 > div {
+    background-color: #161616;
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    height: 100px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Icon Styles */
+.about-me-inner-container .skills .skill-cards i {
+    font-size: 1.3rem;
+    color: #00FF00;
+    align-self: flex-start;
+}
+
+/* Text Label Styles */
+.about-me-inner-container .skills .skill-cards p {
+    color: aliceblue;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: right;
+    margin: 0;
+    align-self: flex-end;
+}
+
+/* ======================================================PORTFOLIO SECTION */
+#portfolio {
+    width: 90%;
+    margin-left: 5%;
+}
+
+#portfolio h1 {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.portfolio-card {
+    background-color: #161616;
+    border-radius: 14px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: #111111;
+    border: 1px dashed #333333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Real project screenshot (same size as the placeholder) */
+.project-img {
+    width: 100%;
+    height: 180px;
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top left;
+}
+
+.project-img-placeholder i {
+    color: #00FF00;
+    font-size: 1.5rem;
+}
+
+.project-img-placeholder span {
+    color: #00FF00;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.portfolio-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+}
+
+.project-desc {
+    color: #AAAAAA;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.tech-tags-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.tech-label {
+    color: #888888;
+    font-size: 0.7rem;
+}
+
+.tech-badges {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.tech-badges span {
+    background-color: #222222;
+    color: #CCCCCC;
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.project-view-btn,
+.project-view-btn:link,
+.project-view-btn:visited {
+    background-color: #00FF00;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 4px;
+}
+
+/* ======================================================CONTACT SECTION */
+#contact {
+    width: 90%;
+    margin-left: 5%;
+}
+
+#contact h1 {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.contact-inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-left {
+    width: 45%;
+}
+
+.contact-badge {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-badge span {
+    background-color: #00FF00;
+    color: #000000;
+    padding: 0 0.4rem;
+    border-radius: 4px;
+}
+
+.contact-text-desc {
+    color: #AAAAAA;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.contact-details-box {
+    background-color: #161616;
+    border-radius: 12px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 85%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #FFFFFF;
+    font-size: 0.75rem;
+}
+
+.contact-item i {
+    color: #00FF00;
+    font-size: 1rem;
+}
+
+.contact-right {
+    width: 45%;
+    background-color: #161616;
+    border-radius: 14px;
+    padding: 1.8rem;
+}
+
+.hire-form h3 {
+    color: #FFFFFF;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.hire-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hire-form label {
+    color: #888888;
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+}
+
+.hire-form input,
+.hire-form textarea {
+    background-color: #222222;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 0.6rem;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+.hire-form input:focus,
+.hire-form textarea:focus {
+    border-color: #00FF00;
+}
+
+.submit-btn {
+    align-self: center;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.5rem 1.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.85;
+}
+
+/* ======================================================HOVER & CLICK EFFECTS */
+/* Every button grows a little on hover and shrinks a little when clicked */
+.btn-work,
+.btn-touch,
+.cv-btn,
+.project-view-btn,
+.submit-btn {
+    display: inline-block; /* needed so links can grow and shrink */
+    transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.btn-work:hover,
+.btn-touch:hover,
+.about-me-inner-container .text .cv-btn:hover,
+.project-view-btn:hover,
+.submit-btn:hover {
+    transform: scale(1.06);
+}
+
+.btn-work:active,
+.btn-touch:active,
+.about-me-inner-container .text .cv-btn:active,
+.project-view-btn:active,
+.submit-btn:active {
+    transform: scale(0.94);
+}
+
+/* Skill tiles grow a little on hover */
+.about-me-inner-container .skills .skill-cards .column-1 > div,
+.about-me-inner-container .skills .skill-cards .column-2 > div {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-me-inner-container .skills .skill-cards .column-1 > div:hover,
+.about-me-inner-container .skills .skill-cards .column-2 > div:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 14px rgba(0, 255, 0, 0.18);
+}
+
+/* ======================================================PHONE MENU BUTTON */
+.menu-toggle {
+    display: none; /* hidden on big screens */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #00FF00;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* the three lines turn into an X when the menu is open */
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ======================================================TABLETS (1024px and below) */
+@media (max-width: 1024px) {
+    .intro-section .greeting {
+        font-size: 2.2rem;
+    }
+
+    .selfie-container .green-background {
+        width: 240px;
+        height: 240px;
+    }
+
+    .about-me-inner-container {
+        gap: 2rem;
+    }
+}
+
+/* ======================================================SMALL TABLETS & PHONES (850px and below) */
+@media (max-width: 850px) {
+    /* show the menu button, turn the links into a drop-down */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background-color: black;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .links.open {
+        max-height: 400px;
+        border-bottom: 1px solid #1d1d1d;
+    }
+
+    .links a,
+    .links a:link,
+    .links a:visited {
+        display: block;
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    .links a::after {
+        display: none; /* no underline in the drop-down */
+    }
+
+    .links a:hover,
+    .links a.active {
+        color: #00FF00;
+    }
+
+    /* sections: less empty space */
+    #home,
+    #about-me,
+    #portfolio,
+    #contact {
+        padding: 3rem 0;
+    }
+
+    #about-me h1,
+    #portfolio h1,
+    #contact h1 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    /* home: photo on top, text centred below */
+    #home {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .selfie-container {
+        order: -1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .intro-section {
+        width: 100%;
+    }
+
+    .intro-section .text br {
+        display: none; /* let the text wrap naturally */
+    }
+
+    .intro-btns {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* about me: text on top, skills below */
+    .about-me-inner-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .about-me-inner-container .text,
+    .about-me-inner-container .skills {
+        width: 100%;
+    }
+
+    /* projects: one card per row */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* contact: details on top, form below */
+    .contact-inner-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    .contact-details-box {
+        width: 100%;
+    }
+}
+
+/* ======================================================PHONES (480px and below) */
+@media (max-width: 480px) {
+    .nav-bar {
+        padding: 0 1rem;
+    }
+
+    .links a,
+    .links a:link,
+    .links a:visited {
+        padding: 1rem;
+    }
+
+    #home,
+    #about-me,
+    #portfolio,
+    #contact {
+        width: calc(100% - 2rem);
+        margin-left: 1rem;
+    }
+
+    .intro-section .greeting {
+        font-size: 1.9rem;
+    }
+
+    .selfie-container .green-background {
+        width: 210px;
+        height: 210px;
+    }
+
+    #about-me h1,
+    #portfolio h1,
+    #contact h1 {
+        font-size: 1.4rem;
+    }
+
+    .about-me-inner-container .text .stats .stat-number {
+        font-size: 1.35rem;
+    }
+
+    .about-me-inner-container .skills .skill-cards .column-1 > div,
+    .about-me-inner-container .skills .skill-cards .column-2 > div {
+        height: 88px;
+    }
+
+    .project-img,
+    .project-img-placeholder {
+        height: 150px;
+    }
+
+    .project-footer {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .tech-badges {
+        flex-wrap: wrap;
+    }
+
+    .contact-badge {
+        font-size: 1.6rem;
+    }
+
+    .contact-right {
+        padding: 1.2rem;
+    }
+
+    .contact-item span {
+        word-break: break-word;
+    }
+}

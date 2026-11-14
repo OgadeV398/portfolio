@@ -1,0 +1,654 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ======================================================MAIN CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+/* ======================================================NAVIGATION (same as home page) */
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 2rem;
+    background-color: black;
+}
+
+.nav-bar .name {
+    color: #00FF00;
+    font-size: 1.2rem;
+}
+
+.links {
+    font-size: 0.85rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.links a {
+    position: relative;
+    display: inline-block;
+    color: aliceblue;
+    padding: 0.3dvw;
+    transition: transform 0.15s ease;
+}
+
+.links a:active {
+    transform: scale(0.95);
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #00FF00;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after,
+.links a.active::after {
+    width: 100%;
+}
+
+/* ======================================================PAGE CONTENT WRAPPER */
+.project-page {
+    width: 90%;
+    margin-left: 5%;
+}
+
+/* Back link at the top */
+.back-link,
+.back-link:link,
+.back-link:visited {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+}
+
+.back-link:hover {
+    color: #00FF00;
+}
+
+/* ======================================================HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin: 2.5rem 0 4rem;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #00FF00;
+    color: #000000;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    margin: 0.9rem 0 1.2rem;
+}
+
+/* Green part of headings, with the same glow as the home page */
+.hero-text h1 span,
+.card h2 span {
+    color: #00FF00;
+    text-shadow:
+        0 0 8px rgba(0, 255, 0, 0.6),
+        0 0 20px rgba(0, 255, 0, 0.35);
+}
+
+.hero-text p {
+    color: #DDDDDD;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.btn-live,
+.btn-code {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    height: 46px;
+    padding: 0 1.4rem;
+    border-radius: 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: transform 0.15s ease;
+}
+
+.btn-live,
+.btn-live:link,
+.btn-live:visited {
+    background-color: #00FF00;
+    color: #000000;
+}
+
+.btn-code,
+.btn-code:link,
+.btn-code:visited {
+    border: 1.5px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+/* Buttons grow a little on hover and shrink a little when clicked */
+.btn-live:hover,
+.btn-code:hover,
+.back-btn:hover {
+    transform: scale(1.06);
+}
+
+.btn-live:active,
+.btn-code:active,
+.back-btn:active {
+    transform: scale(0.94);
+}
+
+.btn-code i {
+    font-size: 1.3rem;
+}
+
+/* ======================================================LAPTOP + TERMINAL PICTURE (pure CSS) */
+.scene {
+    position: relative;
+    width: 420px;
+    height: 320px;
+    flex-shrink: 0;
+    border-radius: 22px;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 30% 20%, #3a3f3c 0%, #1c1f1e 45%, #0b0c0c 100%);
+}
+
+/* the "desk" */
+.scene::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 84px;
+    background: linear-gradient(#2b221b, #17120e);
+}
+
+.scene .glow {
+    position: absolute;
+    left: 70px;
+    top: 40px;
+    width: 300px;
+    height: 210px;
+    background: radial-gradient(rgba(0, 255, 0, 0.2), transparent 65%);
+}
+
+.laptop {
+    position: absolute;
+    left: 50px;
+    top: 36px;
+    width: 330px;
+    z-index: 2;
+    transform: perspective(900px) rotateY(-12deg) rotateX(4deg);
+}
+
+.lid {
+    background-color: #1b1c1e;
+    border: 1px solid #3a3b3e;
+    border-radius: 12px 12px 4px 4px;
+    padding: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.screen {
+    background-color: #0b0f0b;
+    height: 196px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.title-bar {
+    height: 17px;
+    background-color: #1d201d;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 7px;
+}
+
+.title-bar i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ff5f57;
+}
+
+.title-bar i:nth-child(2) { background-color: #febc2e; }
+.title-bar i:nth-child(3) { background-color: #28c840; }
+
+.title-bar span {
+    margin: 0 auto;
+    color: #888888;
+    font-family: monospace;
+    font-size: 7px;
+}
+
+.terminal {
+    padding: 8px 10px;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    line-height: 1.65;
+    color: #cfd6cf;
+    white-space: nowrap;
+}
+
+.terminal .cmd { color: #FFFFFF; }
+.terminal .ok { color: #00FF00; }
+.terminal .title { color: #00FF00; font-weight: 700; }
+.terminal .prompt { color: #00FF00; }
+
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    background-color: #00FF00;
+    vertical-align: middle;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.base {
+    position: relative;
+    height: 13px;
+    margin: 0 -24px;
+    background: linear-gradient(#c9c9cc, #6d6e72);
+    border-radius: 0 0 12px 12px;
+}
+
+.base::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 64px;
+    height: 4px;
+    background-color: #8a8b8f;
+    border-radius: 0 0 5px 5px;
+    transform: translateX(-50%);
+}
+
+/* ======================================================INFO CARDS */
+.card {
+    position: relative;
+    background-color: #0e0e0e;
+    border: 1px solid #1d1d1d;
+    border-radius: 16px;
+    padding: 1.4rem 1.8rem 1.5rem 2.6rem;
+}
+
+/* green bar down the left side */
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0.8rem;
+    top: 1.4rem;
+    bottom: 1.4rem;
+    width: 4px;
+    background-color: #00FF00;
+    border-radius: 2px;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+/* small icons before each heading */
+.card-head > i {
+    color: #00FF00;
+    font-size: 1.4rem;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.card p {
+    color: #E6E6E6;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.6rem;
+}
+
+/* Key features list */
+.features {
+    list-style: none;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    color: #E6E6E6;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.features li i {
+    color: #00FF00;
+}
+
+/* Technologies */
+.techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.2rem;
+}
+
+.tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.95rem;
+}
+
+.tech i {
+    font-size: 2.8rem;
+}
+
+.tech .fa-terminal,
+.tech .fa-palette {
+    color: #00FF00;
+}
+
+/* ======================================================BOTTOM BACK BUTTON */
+.back-btn,
+.back-btn:link,
+.back-btn:visited {
+    transition: transform 0.15s ease, border-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+    height: 48px;
+    padding: 0 2.2rem 0 1.5rem;
+    margin-top: 2.6rem;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 28px;
+    color: #FFFFFF;
+    font-size: 1rem;
+}
+
+.back-btn i {
+    color: #00FF00;
+}
+
+.back-btn:hover {
+    border-color: #00FF00;
+}
+
+/* ======================================================PHONE MENU BUTTON */
+.menu-toggle {
+    display: none; /* hidden on big screens */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #00FF00;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* the three lines turn into an X when the menu is open */
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ======================================================TABLETS (1024px and below) */
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .scene {
+        width: 380px;
+    }
+
+    .laptop {
+        left: 25px;
+    }
+}
+
+/* ======================================================SMALL TABLETS & PHONES (850px and below) */
+@media (max-width: 850px) {
+    /* show the menu button, turn the links into a drop-down */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background-color: black;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .links.open {
+        max-height: 400px;
+        border-bottom: 1px solid #1d1d1d;
+    }
+
+    .links a,
+    .links a:link,
+    .links a:visited {
+        display: block;
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    .links a::after {
+        display: none; /* no underline in the drop-down */
+    }
+
+    .links a:hover,
+    .links a.active {
+        color: #00FF00;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 2rem 0 3rem;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-btns {
+        flex-wrap: wrap;
+    }
+
+    .scene {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    /* keep the laptop centred in the picture */
+    .laptop {
+        left: 50%;
+        margin-left: -165px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ======================================================PHONES (480px and below) */
+@media (max-width: 480px) {
+    .nav-bar {
+        padding: 0 1rem;
+    }
+
+    .links a,
+    .links a:link,
+    .links a:visited {
+        padding: 1rem;
+    }
+
+    .project-page {
+        width: calc(100% - 2rem);
+        margin-left: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn-live,
+    .btn-code {
+        font-size: 0.9rem;
+        padding: 0 1.1rem;
+    }
+
+    .scene {
+        height: 260px;
+    }
+
+    .laptop {
+        top: 22px;
+        transform-origin: center top;
+        transform: perspective(900px) rotateY(-12deg) rotateX(4deg) scale(0.82);
+    }
+
+    .card {
+        padding: 1.2rem 1.2rem 1.3rem 2.1rem;
+    }
+
+    .card::before {
+        left: 0.7rem;
+    }
+
+    .card h2 {
+        font-size: 1.25rem;
+    }
+
+    .card p,
+    .features li {
+        font-size: 0.95rem;
+    }
+
+    .features li {
+        align-items: flex-start;
+        gap: 0.8rem;
+        line-height: 1.6;
+        margin-bottom: 0.3rem;
+    }
+
+    .features li i {
+        margin-top: 0.3rem;
+    }
+
+    .techs {
+        gap: 1.4rem;
+    }
+
+    .tech i {
+        font-size: 2.3rem;
+    }
+
+    .back-btn,
+    .back-btn:link,
+    .back-btn:visited {
+        width: 100%;
+        justify-content: center;
+    }
+}

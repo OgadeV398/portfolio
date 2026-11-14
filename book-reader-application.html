@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reader Application | Chimdindu Okorafor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/book-reader-application.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <!-- ======================================================NAVIGATION AND LINKS -->
+        <header class="nav-bar">
+            <p class="name"><b>Chimdindu</b></p>
+            <nav class="links">
+                <a href="index.html#home">HOME</a>
+                <a href="index.html#about-me">ABOUT ME</a>
+                <a href="index.html#about-me">SKILLS</a>
+                <a href="index.html#portfolio" class="active">PORTFOLIO</a>
+                <a href="index.html#contact">CONTACT</a>
+            </nav>
+
+            <!-- Menu button (only shows on phones and small tablets) -->
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <div class="project-page">
+
+            <a href="index.html#portfolio" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+
+            <!-- ======================================================HERO -->
+            <section class="hero">
+                <div class="hero-text">
+                    <span class="tag">CLI Project</span>
+                    <h1>Book Reader<br><span>Application</span></h1>
+                    <p>A terminal-based app that lets users search for books and read about them without leaving the command line.</p>
+                    <div class="hero-btns">
+                        <!-- Put your live project link here -->
+                        <a href="#" class="btn-live" target="_blank">View Live Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <!-- GitHub repo -->
+                        <a href="https://github.com/OgadeV398/Projects" class="btn-code" target="_blank" rel="noopener">View Code <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Real screenshot of the app, inside a terminal window -->
+                <div class="scene">
+                    <div class="glow"></div>
+                    <div class="screenshot-window">
+                        <div class="title-bar"><i></i><i></i><i></i><span>book_reader.js — terminal</span></div>
+                        <img src="images/book-reader-application.png" alt="Book Reader Application running in the terminal">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================PROJECT OVERVIEW -->
+            <section class="card">
+                <div class="card-head">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <h2>Project <span>Overview</span></h2>
+                </div>
+                <p>The Book Reader Application is a command-line tool that connects to an external books API so users can search for titles, browse results and view book details right from the terminal. It was built to make finding and exploring books fast, lightweight and distraction-free.</p>
+            </section>
+
+            <!-- ======================================================PROBLEM + FEATURES -->
+            <div class="row">
+                <section class="card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <h2>The <span>Problem</span></h2>
+                    </div>
+                    <p>Finding information about a book usually means opening a browser, wading through ads and jumping between sites. Developers and terminal lovers needed a quick, focused way to search and read about books in one place.</p>
+                </section>
+
+                <section class="card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-star"></i>
+                        <h2>Key <span>Features</span></h2>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i>Search books by title or author</li>
+                        <li><i class="fa-solid fa-check"></i>Fetch live data from an external API</li>
+                        <li><i class="fa-solid fa-check"></i>View detailed book information</li>
+                        <li><i class="fa-solid fa-check"></i>Fast, lightweight terminal interface</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- ======================================================TECHNOLOGIES + WHAT I LEARNED -->
+            <div class="row">
+                <section class="card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h2>Technologies Used</h2>
+                    </div>
+                    <div class="techs">
+                        <div class="tech">
+                            <i class="devicon-nodejs-plain colored"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech">
+                            <i class="devicon-express-original" style="color:#e8e8e8"></i>
+                            <span>Express.js</span>
+                        </div>
+                        <div class="tech">
+                            <i class="devicon-mongodb-plain colored"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech">
+                            <i class="fa-solid fa-terminal"></i>
+                            <span>CLI</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h2>What I Learned</h2>
+                    </div>
+                    <p>I learned how to consume and handle data from an external API, structure a backend with Express, and store data with MongoDB. It also taught me how to design a clear, friendly experience inside the terminal.</p>
+                </section>
+            </div>
+
+            <a href="index.html#portfolio" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+
+        </div>
+
+    </main>
+
+    <!-- ======================================================PHONE MENU -->
+    <script>
+        const menuButton = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".links");
+
+        // open or close the menu when the button is tapped
+        menuButton.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
+            menuButton.classList.toggle("open", isOpen);
+            menuButton.setAttribute("aria-expanded", isOpen);
+        });
+
+        // close the menu after a link is tapped
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                menuButton.classList.remove("open");
+                menuButton.setAttribute("aria-expanded", false);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimdindu Okorafor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <main class="container">
+
+
+        <!-- ======================================================NAVIGATION AND LINKS -->
+        <header class="nav-bar">
+            <p class="name"><b>Chimdindu</b></p>
+                <nav class="links">
+                    <a href="#home">HOME</a>
+                    <a href="#about-me">ABOUT ME</a>
+                    <a href="#about-me">SKILLS</a> <!-- skills are on the About Me screen -->
+                    <a href="#portfolio">PORTFOLIO</a>
+                    <a href="#contact">CONTACT</a>
+                </nav>
+
+            <!-- Menu button (only shows on phones and small tablets) -->
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <!-- ======================================================HOME-->
+        <section id="home">
+
+            <!-- ======================================================INTRO SECTION-->
+            <section class="intro-section">
+                <p class="greeting">Hey, <span>I’m Chimdindu<br>Okorafor</span></p>
+                <p class="job">Fullstack Web Developer</p>
+                <p class="text">I create beautiful, high-performance web<br>
+                                applications using development tools such as<br>
+                                HTML,CSS,React and Nodejs</p>
+                <div class="intro-btns">
+                    <a href="#portfolio" class="btn-work">View my work</a>
+                    <a href="#contact" class="btn-touch">Get in Touch</a>
+                </div>
+            </section>
+
+            <!-- ======================================================SELFIE. GEMINI GENERATED-->
+            <div class="selfie-container">
+                <div class="green-background">
+                    <img src="images/WhatsApp_Image_2026-07-09_at_10.51.34_AM-removebg-preview.png" alt="Chimdindu Joseph Okorafor">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ======================================================ABOUT ME SECTION -->
+        <section id="about-me">
+            <h1>Who is <span>Chimdindu Okorafor?</span></h1>
+            <div class="about-me-inner-container">
+                
+                <!-- ======================================================TEXT SECTION (LEFT) -->
+                <section class="text">
+                    <h2>Fullstack Developer</h2>
+                    <p>I'm Chimdindu, a passionate web developer with 
+                        expertise in building scalable and 
+                        efficient applications. I specialize in tools 
+                        such as React, Nodejs, HTML, CSS, Express.js 
+                        and Mongodb</p>
+                    
+                    <!-- Stats Row Container -->
+                    <div class="stats">
+                        <div class="stat-item">
+                            <p class="stat-number">10+</p>
+                            <p class="stat-label">Projects started</p>
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-number">5+</p>
+                            <p class="stat-label">Technologies</p>
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-number">10+</p>
+                            <p class="stat-label">Projects completed</p>
+                        </div>
+                    </div>
+                    
+                    <a href="files/Chimdindu_Joseph_Okorafor_CV.docx" class="cv-btn" download>Download CV</a>
+                </section>
+
+                <!-- ======================================================SKILLS SECTION (RIGHT) -->
+                <section class="skills">
+                    <h2>Skills</h2>
+                    <div class="skill-cards">
+
+                        <div class="column-1">
+                            <div class="python">
+                                <i class="devicon-python-plain card"></i>
+                                <p>Python</p>
+                            </div>
+
+                            <div class="figma">
+                                <i class="devicon-figma-plain card"></i>
+                                <p>Figma</p>
+                            </div>
+                        </div>
+
+                        <div class="column-2">
+                            <div class="javascript">
+                                <i class="devicon-javascript-plain card"></i>
+                                <p>Javascript</p>
+                            </div>
+
+                            <div class="cpp">
+                                <i class="devicon-cplusplus-plain card"></i>
+                                <p>C++</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- ======================================================PORTFOLIO SECTION -->
+        <section id="portfolio">
+            <h1>What have <span>I built?</span></h1>
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-card">
+                    <div class="project-img-placeholder">
+                        <i class="fa-regular fa-image"></i>
+                        <span>Image</span>
+                    </div>
+                    <h3>Personal Finance Tracker</h3>
+                    <p class="project-desc">A CLI-based personal finance tracking management system that allows you to save and manage your expenses.</p>
+                    <div class="project-footer">
+                        <div class="tech-tags-container">
+                            <span class="tech-label">Tech Stack</span>
+                            <div class="tech-badges">
+                                <span>Nodejs</span>
+                                <span>C++</span>
+                                <span>Mongodb</span>
+                            </div>
+                        </div>
+                        <a href="personal-finance-tracker.html" class="project-view-btn">View</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="project-img">
+                        <img src="images/book-reader-application.png" alt="Book Reader Application running in the terminal">
+                    </div>
+                    <h3>Book Reader Application</h3>
+                    <p class="project-desc">A book reading application that operates on the terminal. Communicates with external APIs to display user searched books.</p>
+                    <div class="project-footer">
+                        <div class="tech-tags-container">
+                            <span class="tech-label">Tech Stack</span>
+                            <div class="tech-badges">
+                                <span>Nodejs</span>
+                                <span>Expressjs</span>
+                                <span>Mongodb</span>
+                            </div>
+                        </div>
+                        <a href="book-reader-application.html" class="project-view-btn">View</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="project-img">
+                        <img src="images/library-management-system.png" alt="Library Management System running in the terminal">
+                    </div>
+                    <h3>Library Management System</h3>
+                    <p class="project-desc">A CLI functional LMS that allows easy management, storage and borrowing of books.</p>
+                    <div class="project-footer">
+                        <div class="tech-tags-container">
+                            <span class="tech-label">Tech Stack</span>
+                            <div class="tech-badges">
+                                <span>C++</span>
+                            </div>
+                        </div>
+                        <a href="library-management-system.html" class="project-view-btn">View</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="project-img-placeholder">
+                        <i class="fa-regular fa-image"></i>
+                        <span>Image</span>
+                    </div>
+                    <h3>File Management System</h3>
+                    <p class="project-desc">Operating from the terminal, this application allows for easy file and folder interaction and management straight from the terminal.</p>
+                    <div class="project-footer">
+                        <div class="tech-tags-container">
+                            <span class="tech-label">Tech Stack</span>
+                            <div class="tech-badges">
+                                <span>Nodejs</span>
+                            </div>
+                        </div>
+                        <a href="file-management-system.html" class="project-view-btn">View</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======================================================CONTACT SECTION -->
+        <section id="contact">
+            <h1>Let’s <span>work together!</span></h1>
+            <div class="contact-inner-container">
+                <div class="contact-left">
+                    <h2 class="contact-badge"><span>Contact</span> Me</h2>
+                    <p class="contact-text-desc">Reach out to me, let us collaborate and work together! Find my details below:</p>
+                    
+                    <div class="contact-details-box">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>chimdinduokorafor@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+234 8102324020</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>+234 8102324020</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form class="hire-form">
+                        <h3>Hire Form</h3>
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter your name">
+
+                        <label>Email or Phone Number</label>
+                        <input type="text" placeholder="Enter Email or Phone Number">
+
+                        <label>Message/ Brief description</label>
+                        <textarea rows="4" placeholder="A brief description about project or what you want to work on."></textarea>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    
+    <!-- ======================================================PHONE MENU -->
+    <script>
+        const menuButton = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".links");
+
+        // open or close the menu when the button is tapped
+        menuButton.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
+            menuButton.classList.toggle("open", isOpen);
+            menuButton.setAttribute("aria-expanded", isOpen);
+        });
+
+        // close the menu after a link is tapped
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                menuButton.classList.remove("open");
+                menuButton.setAttribute("aria-expanded", false);
+            });
+        });
+    </script>
+
+</body>
+</html>

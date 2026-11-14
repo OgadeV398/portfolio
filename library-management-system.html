@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System | Chimdindu Okorafor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/library-management-system.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <!-- ======================================================NAVIGATION AND LINKS -->
+        <header class="nav-bar">
+            <p class="name"><b>Chimdindu</b></p>
+            <nav class="links">
+                <a href="index.html#home">HOME</a>
+                <a href="index.html#about-me">ABOUT ME</a>
+                <a href="index.html#about-me">SKILLS</a>
+                <a href="index.html#portfolio" class="active">PORTFOLIO</a>
+                <a href="index.html#contact">CONTACT</a>
+            </nav>
+
+            <!-- Menu button (only shows on phones and small tablets) -->
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <div class="project-page">
+
+            <a href="index.html#portfolio" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+
+            <!-- ======================================================HERO -->
+            <section class="hero">
+                <div class="hero-text">
+                    <span class="tag">CLI Project</span>
+                    <h1>Library Management<br><span>System</span></h1>
+                    <p>A functional command-line system for managing, storing and borrowing books in a library.</p>
+                    <div class="hero-btns">
+                        <!-- Put your live project link here -->
+                        <a href="#" class="btn-live" target="_blank">View Live Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <!-- GitHub repo -->
+                        <a href="https://github.com/OgadeV398/Projects" class="btn-code" target="_blank" rel="noopener">View Code <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Real screenshot of the app, inside a terminal window -->
+                <div class="scene">
+                    <div class="glow"></div>
+                    <div class="screenshot-window">
+                        <div class="title-bar"><i></i><i></i><i></i><span>library — terminal</span></div>
+                        <img src="images/library-management-system.png" alt="Library Management System running in the terminal">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================================PROJECT OVERVIEW -->
+            <section class="card">
+                <div class="card-head">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <h2>Project <span>Overview</span></h2>
+                </div>
+                <p>The Library Management System is a C++ console application that makes it easy to manage a library’s collection. Librarians can add and remove books, register members, and track which books are borrowed and returned, all from the terminal.</p>
+            </section>
+
+            <!-- ======================================================PROBLEM + FEATURES -->
+            <div class="row">
+                <section class="card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <h2>The <span>Problem</span></h2>
+                    </div>
+                    <p>Small libraries often track books with paper records or messy spreadsheets, which makes it hard to know what is available and who has borrowed what. There was a need for a simple, reliable system to keep everything organised.</p>
+                </section>
+
+                <section class="card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-star"></i>
+                        <h2>Key <span>Features</span></h2>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i>Add, update and remove books</li>
+                        <li><i class="fa-solid fa-check"></i>Manage library members</li>
+                        <li><i class="fa-solid fa-check"></i>Borrow and return books</li>
+                        <li><i class="fa-solid fa-check"></i>Track availability in real time</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- ======================================================TECHNOLOGIES + WHAT I LEARNED -->
+            <div class="row">
+                <section class="card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h2>Technologies Used</h2>
+                    </div>
+                    <div class="techs">
+                        <div class="tech">
+                            <i class="devicon-cplusplus-plain colored"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="tech">
+                            <i class="fa-solid fa-terminal"></i>
+                            <span>CLI</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h2>What I Learned</h2>
+                    </div>
+                    <p>I learned how to apply object-oriented programming in C++, using classes to model books, members and loans. It also strengthened my understanding of data structures, file handling and writing clean, organised code.</p>
+                </section>
+            </div>
+
+            <a href="index.html#portfolio" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+
+        </div>
+
+    </main>
+
+    <!-- ======================================================PHONE MENU -->
+    <script>
+        const menuButton = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".links");
+
+        // open or close the menu when the button is tapped
+        menuButton.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
+            menuButton.classList.toggle("open", isOpen);
+            menuButton.setAttribute("aria-expanded", isOpen);
+        });
+
+        // close the menu after a link is tapped
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                menuButton.classList.remove("open");
+                menuButton.setAttribute("aria-expanded", false);
+            });
+        });
+    </script>
+
+</body>
+</html>
